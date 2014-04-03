@@ -48,6 +48,6 @@ doSomething(function() {
 });
 ```
 
-This is because JS works on an evented model and is single threaded. It doesn't block on I/O. In any instance where your function does an I/O call, it defers that operation, and continues with the program execution. In java, this is equivalent to a thread being spawned on every I/O call. With threads, you get race conditions, all over and you need to handle that. Because of that, we in java choose our battles with thread. Whereas in javascript, (although we don't work with threads in the same sense) you can not subscibe to the synchronous coding style when your program does I/O. 
+This is because JS works on an evented model and is single threaded. It doesn't block on I/O. In any instance where your function does an I/O call, it defers that operation, and continues with the program execution. In java, this is equivalent to a thread being spawned on every I/O call. With threads, you get race conditions, all over and you need to handle that. Because of that, we in java choose our battles with threads. Whereas in javascript, (although we don't work with threads in the same sense) you can not subscibe to the synchronous coding style when your program does I/O. 
 
 This make Javascript really fast, suitable to work with front-ends (browsers do not freeze on a form submit because of this reason), but makes it a tad bit harder to write.
